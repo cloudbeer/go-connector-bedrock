@@ -10,6 +10,7 @@ import (
 
 // web controllers
 func home(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	fmt.Fprintf(w, "Hello bedrock api proxy...")
 }
 

@@ -1,5 +1,9 @@
 # A go proxy for bedrock
 
+当前只支持 chat, 固定了几个模型。
+
+多模态和 tool 正在开发中...
+
 Run:
 
 ```shell

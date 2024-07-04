@@ -11,6 +11,9 @@ import (
 // web controllers
 func home(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "*")
+	w.Header().Set("Access-Control-Allow-Headers", "*")
+	
 	fmt.Fprintf(w, "Hello bedrock api proxy...")
 }
 
@@ -24,7 +27,9 @@ func chat(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(chatReq.Model)
 
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Expose-Headers", "Content-Type")
+	w.Header().Set("Access-Control-Allow-Methods", "*")
+	w.Header().Set("Access-Control-Allow-Headers", "*")
+	// w.Header().Set("Access-Control-Expose-Headers", "Content-Type")
 
 	if chatReq.Stream {
 		w.Header().Set("Content-Type", "text/event-stream")

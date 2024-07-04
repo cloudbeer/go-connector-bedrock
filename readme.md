@@ -1,4 +1,4 @@
-# A proxy for bedrock
+# A go proxy for bedrock
 
 Run:
 

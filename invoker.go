@@ -88,7 +88,7 @@ func formatStreamInput(chatReq openai.ChatCompletionRequest) bedrockruntime.Conv
 	}
 
 	return bedrockruntime.ConverseStreamInput{
-		ModelId:  &chatReq.Model,
+		ModelId:  chooseModel(chatReq.Model),
 		Messages: converseMessages,
 		System:   converseSystem,
 	}
